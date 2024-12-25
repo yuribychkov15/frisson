@@ -1,42 +1,151 @@
+@font-face {
+  font-family: 'Aktiv Grotesk';
+  src: url('/assets/fonts/AktivGrotesk-Regular.woff2') format('woff2'),
+       url('/assets/fonts/AktivGrotesk-Regular.woff') format('woff');
+  font-weight: normal; /* Regular */
+  font-style: normal;
+}
+
+/* Landing Page */
+.landing-page {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Main Logo Container */
+.main-logo-container {
+  position: absolute; /* Absolute to ensure precise positioning */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the logo */
+  width: 150vh; /* Fixed width to maintain consistent size */
+  height: 150vh; /* Match width for square aspect ratio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* SVG inside Main Logo Container */
+.main-logo-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Menu Links */
+.menu-links {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.menu-links a {
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: color 0.3s ease; /* Add a smooth color transition */
+}
+
+/* Position menu items around the logo */
+.menu-links .projects {
+  top: 24%;
+  left: 10%;
+}
+
+.menu-links .services {
+  top: 24%;
+  left: 62%;
+}
+
+.menu-links .info {
+  bottom: 24%;
+  left: 23%;
+  transform: translateX(-50%);
+}
+
+.menu-links .contact {
+  bottom: 24%;
+  right: 5%;
+}
+
+/* Add hover effects for menu links */
+.menu-links a:hover {
+  color: #555; /* Change color on hover */
+}
+
+/* Corner Social Icons */
+.corner-icons a {
+  position: fixed;
+  margin: 20px; /* Equal spacing around the icons */
+  display: flex; /* Ensures content inside the link stays aligned */
+  justify-content: center;
+  align-items: center;
+  width: 24px; /* Set the size of the container */
+  height: 24px;
+  transition: transform 0.3s ease; /* Add hover animation */
+}
+
+.corner-icons svg {
+  width: 24px; /* Explicitly set icon width */
+  height: 24px; /* Explicitly set icon height */
+  fill: black; /* Set the color */
+}
+
+.corner-icons .top-left {
+  top: 0;
+  left: 0;
+  margin: 20px; /* Equal margin for top and left */
+}
+
+.corner-icons .top-right {
+  top: 0;
+  right: 0;
+  margin: 20px; /* Equal margin for top and right */
+}
+
+.corner-icons .bottom-right {
+  bottom: 0;
+  right: 0;
+  margin: 20px; /* Equal margin for bottom and right */
+}
+
+.corner-icons .bottom-left {
+  bottom: 0;
+  left: 0;
+  margin: 20px; /* Equal margin for bottom and left */
+}
+
+
+/* SVG Path Fill Color */
+.corner-icons svg path,
+.main-logo-container svg path {
+  fill: black;
+}
+
+/* Hover Effects for Social Icons */
+.corner-icons a:hover {
+  transform: scale(1.2); /* Scale up slightly on hover */
+}
+
+/* Basic Reset */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Aktiv Grotesk', Arial, sans-serif;
+
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  height: 100vh;
+  width: 100vw;
 }
