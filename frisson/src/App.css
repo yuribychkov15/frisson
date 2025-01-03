@@ -6,6 +6,43 @@
   font-style: normal;
 }
 
+
+/* Responsive adjustments for smaller screens */
+/* Ensure Menu Links Scale with Logo Dynamically */
+@media only screen and (max-width: 1024px) {
+  .main-logo-container {
+    width: 70vw;
+    height: 70vw;
+  }
+  
+  .menu-links a {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main-logo-container {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .menu-links a {
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-logo-container {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .menu-links a {
+    font-size: 0.2rem;
+  }
+}
+
+
 /* Landing Page */
 .landing-page {
   min-height: 100vh;
@@ -20,12 +57,14 @@
 
 /* Main Logo Container */
 .main-logo-container {
-  position: absolute; /* Absolute to ensure precise positioning */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the logo */
-  width: 150vh; /* Fixed width to maintain consistent size */
-  height: 150vh; /* Match width for square aspect ratio */
+  transform: translate(-50%, -50%);
+  width: 80vw; /* Make it responsive */
+  height: 80vw; /* Match width for a square aspect ratio */
+  max-width: 150vh; /* Prevent it from growing too large */
+  max-height: 150vh; /* Maintain aspect ratio at large sizes */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,44 +76,48 @@
   height: 100%;
 }
 
-/* Menu Links */
+/* Menu Links - Updated for better responsiveness */
 .menu-links {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+  pointer-events: none; /* Allows clicking through the container */
 }
 
 .menu-links a {
   position: absolute;
   text-decoration: none;
   color: black;
-  font-size: 14px;
-  letter-spacing: 2px;
-  transition: color 0.3s ease; /* Add a smooth color transition */
+  pointer-events: auto; /* Re-enable clicking for links */
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: color 0.3s ease;
 }
 
-/* Position menu items around the logo */
+/* Position menu items with percentage-based positioning */
 .menu-links .projects {
-  top: 24%;
-  left: 10%;
+  top: 26%;
+  left: 14%;
+  transform: translate(-50%, -50%);
 }
 
 .menu-links .services {
-  top: 24%;
-  left: 62%;
+  top: 25%;
+  left: 65.5%;
+  transform: translate(-50%, -50%);
 }
 
 .menu-links .info {
-  bottom: 24%;
-  left: 23%;
-  transform: translateX(-50%);
+  bottom: 26%;
+  left: 23.3%;
+  transform: translate(-50%, -50%);
 }
 
 .menu-links .contact {
-  bottom: 24%;
-  right: 5%;
+  bottom: 25%;
+  right: 8.5%;
+  transform: translate(50%, 50%);
 }
 
 /* Add hover effects for menu links */

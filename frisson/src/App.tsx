@@ -47,7 +47,9 @@ const App: React.FC = () => {
       </div>
 
       <div className="main-logo-container" ref={mainLogoRef}>
-        <Logo />
+        <div className="logo">
+          <Logo />
+        </div>
         <nav className="menu-links">
           <a href="#projects" className="projects">PROJECTS</a>
           <a href="#services" className="services">SERVICES</a>
