@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import { gsap } from 'gsap';
 import Logo from './assets/frisson_logo.svg?react';
@@ -6,8 +7,9 @@ import FrissonIcon from './assets/F_LOGO.svg?react';
 import InstagramIcon from './assets/ig_icon.svg?react';
 import SpotifyIcon from './assets/spotify_icon.svg?react';
 import TikTokIcon from './assets/tiktok_icon.svg?react';
+import Contact from './Contact'; // Import Contact page
 
-const App: React.FC = () => {
+const LandingPage: React.FC = () => {
   const mainLogoRef = useRef<HTMLDivElement>(null);
   const socialIconsRef = useRef<HTMLDivElement>(null);
 
@@ -19,7 +21,7 @@ const App: React.FC = () => {
         { opacity: 0 }, // Initial state
         { opacity: 1, duration: 1.5, ease: "power2.out" } // Final state
       );
-  
+
       // Fade-in animation for the social media icons
       gsap.fromTo(
         socialIconsRef.current.querySelectorAll('a'),
@@ -54,10 +56,19 @@ const App: React.FC = () => {
           <a href="#projects" className="projects">PROJECTS</a>
           <a href="#services" className="services">SERVICES</a>
           <a href="#info" className="info">INFO</a>
-          <a href="#contact" className="contact">CONTACT</a>
+          <Link to="/contact" className="contact">CONTACT</Link>
         </nav>
       </div>
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   );
 };
 

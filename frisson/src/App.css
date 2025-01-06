@@ -9,14 +9,71 @@
 
 /* Responsive adjustments for smaller screens */
 /* Ensure Menu Links Scale with Logo Dynamically */
+
+/* Responsive adjustments for larger screens */
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .main-logo-container {
+    width: 85vw;
+    height: 85vw;
+  }
+
+  .menu-links {
+    width: 85%;
+    height: 85%;
+  }
+
+  .menu-links a {
+    font-size: 1.375rem; /* Adjust font size */
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 2559px) {
+  .main-logo-container {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .menu-links {
+    width: 90%;
+    height: 90%;
+  }
+
+  .menu-links a {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .main-logo-container {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  .menu-links {
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu-links a {
+    font-size: 2rem; /* Adjust font size */
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+/* Ensure Menu Links Scale with Logo Dynamically */
 @media only screen and (max-width: 1024px) {
   .main-logo-container {
     width: 70vw;
     height: 70vw;
   }
-  
+
+  .menu-links {
+    width: 70%;
+    height: 70%;
+  }
+
   .menu-links a {
-    font-size: 0.8rem;
+    font-size: 1rem; /* Adjust font size */
   }
 }
 
@@ -26,8 +83,13 @@
     height: 60vw;
   }
 
+  .menu-links {
+    width: 60%;
+    height: 60%;
+  }
+
   .menu-links a {
-    font-size: 0.6rem;
+    font-size: 0.6rem; /* Adjust font size */
   }
 }
 
@@ -37,11 +99,15 @@
     height: 50vw;
   }
 
+  .menu-links {
+    width: 50%;
+    height: 50%;
+  }
+
   .menu-links a {
-    font-size: 0.2rem;
+    font-size: 0.5rem; /* Adjust font size */
   }
 }
-
 
 /* Landing Page */
 .landing-page {
@@ -109,7 +175,7 @@
 }
 
 .menu-links .info {
-  bottom: 26%;
+  bottom: 25%;
   left: 23.3%;
   transform: translate(-50%, -50%);
 }
