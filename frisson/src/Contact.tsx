@@ -1,20 +1,21 @@
 import React, { useEffect, useRef } from 'react';
 import './Contact.css';
 import { gsap } from 'gsap';
-import Logo from './assets/frisson_logo.svg?react';
-import FrissonIcon from './assets/F_LOGO.svg?react';
-import InstagramIcon from './assets/ig_icon.svg?react';
-import SpotifyIcon from './assets/spotify_icon.svg?react';
-import TikTokIcon from './assets/tiktok_icon.svg?react';
+import RebrandLogo from './assets/FRISSON LOGO - HOME - BLUE.svg?react';
+import RebrandFrissonIcon from './assets/FRISSON - REBRAND - FINAL-01.svg?react';
+import RebrandInstagramIcon from './assets/FRISSON - REBRAND - FINAL-04.svg?react';
+import RebrandSpotifyIcon from './assets/FRISSON - REBRAND - FINAL-05.svg?react';
+import RebrandTikTokIcon from './assets/FRISSON - REBRAND - FINAL-06.svg?react';
 
 
 const Contact: React.FC = () => {
   const logoRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
+  const topTextRef = useRef<HTMLDivElement>(null);
+  const bottomTextRef = useRef<HTMLDivElement>(null);
   const socialIconsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (logoRef.current && textRef.current && socialIconsRef.current) {
+    if (logoRef.current && topTextRef.current && bottomTextRef.current && socialIconsRef.current) {
       // Logo shrinking animation
       gsap.fromTo(
         logoRef.current,
@@ -30,8 +31,15 @@ const Contact: React.FC = () => {
 
       // Fade-in for the text
       gsap.fromTo(
-        textRef.current.querySelectorAll('div'),
+        bottomTextRef.current.querySelectorAll('.contact-bottom-text'),
         { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 1.5, ease: "power2.out", stagger: 0.3 }
+      );
+
+      // Fade-in for other text
+      gsap.fromTo(
+        topTextRef.current.querySelectorAll('.contact-top-text'),
+        { opacity: 0, y: -20 },
         { opacity: 1, y: 0, duration: 1.5, ease: "power2.out", stagger: 0.3 }
       );
     }
@@ -41,26 +49,26 @@ const Contact: React.FC = () => {
     <div className="contact-page">
         <div className="corner-icons" ref={socialIconsRef}>
             <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
-            <FrissonIcon />
+            <RebrandFrissonIcon />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
-            <InstagramIcon />
+            <RebrandInstagramIcon />
             </a>
             <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
-            <SpotifyIcon />
+            <RebrandSpotifyIcon />
             </a>
             <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
-            <TikTokIcon />
+            <RebrandTikTokIcon />
             </a>
       </div>
-      <div className="contact-text-top" ref={textRef}>
+      <div className="contact-text-top" ref={topTextRef}>
         <div className="contact-top-text">Email us</div>
-        <div className="contact-email">frissonprojects@gmail.com</div>
+        <div className="contact-top-text">frissonprojects@gmail.com</div>
       </div>
       <div className="contact-logo" ref={logoRef}>
-        <Logo />
+        <RebrandLogo />
       </div>
-      <div className="contact-text-bottom" ref={textRef}>
+      <div className="contact-text-bottom" ref={bottomTextRef}>
         <div className="contact-bottom-text">DM Us</div>
         <div className="contact-bottom-text">@frissonprojects</div>
       </div>
