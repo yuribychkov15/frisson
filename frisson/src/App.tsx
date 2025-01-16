@@ -2,11 +2,14 @@ import React, { useRef, useEffect } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import { gsap } from 'gsap';
-import Logo from './assets/frisson_logo.svg?react';
-import FrissonIcon from './assets/F_LOGO.svg?react';
-import InstagramIcon from './assets/ig_icon.svg?react';
-import SpotifyIcon from './assets/spotify_icon.svg?react';
-import TikTokIcon from './assets/tiktok_icon.svg?react';
+
+import RebrandLogo from './assets/FRISSON LOGO - HOME - BLUE.svg?react';
+import RebrandFrissonIcon from './assets/FRISSON - REBRAND - FINAL-01.svg?react';
+import RebrandInstagramIcon from './assets/FRISSON - REBRAND - FINAL-04.svg?react';
+import RebrandSpotifyIcon from './assets/FRISSON - REBRAND - FINAL-05.svg?react';
+import RebrandTikTokIcon from './assets/FRISSON - REBRAND - FINAL-06.svg?react';
+
+
 import Contact from './Contact'; // Import Contact page
 
 const LandingPage: React.FC = () => {
@@ -35,22 +38,22 @@ const LandingPage: React.FC = () => {
     <div className="landing-page">
       <div className="corner-icons" ref={socialIconsRef}>
         <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
-          <FrissonIcon />
+          <RebrandFrissonIcon />
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
-          <InstagramIcon />
+          <RebrandInstagramIcon />
         </a>
         <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
-          <SpotifyIcon />
+          <RebrandSpotifyIcon />
         </a>
         <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
-          <TikTokIcon />
+          <RebrandTikTokIcon />
         </a>
       </div>
 
       <div className="main-logo-container" ref={mainLogoRef}>
         <div className="logo">
-          <Logo />
+          <RebrandLogo />
         </div>
         <nav className="menu-links">
           <a href="#projects" className="projects">PROJECTS</a>

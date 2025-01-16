@@ -118,6 +118,7 @@
   justify-content: center;
   align-items: center;
   background-color: white;
+  color: #003CE0;
   overflow: hidden;
 }
 
@@ -155,7 +156,7 @@
 .menu-links a {
   position: absolute;
   text-decoration: none;
-  color: black;
+  color: #003CE0;
   pointer-events: auto; /* Re-enable clicking for links */
   white-space: nowrap; /* Prevent text wrapping */
   transition: color 0.3s ease;
@@ -237,7 +238,7 @@
 /* SVG Path Fill Color */
 .corner-icons svg path,
 .main-logo-container svg path {
-  fill: black;
+  fill: #003CE0;
 }
 
 /* Hover Effects for Social Icons */

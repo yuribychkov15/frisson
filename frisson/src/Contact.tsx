@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import './Contact.css';
 import { gsap } from 'gsap';
-import RebrandLogo from './assets/FRISSON LOGO - HOME - BLUE.svg?react';
-import RebrandFrissonIcon from './assets/FRISSON - REBRAND - FINAL-01.svg?react';
-import RebrandInstagramIcon from './assets/FRISSON - REBRAND - FINAL-04.svg?react';
-import RebrandSpotifyIcon from './assets/FRISSON - REBRAND - FINAL-05.svg?react';
-import RebrandTikTokIcon from './assets/FRISSON - REBRAND - FINAL-06.svg?react';
+import Logo from './assets/FRISSON - CONTACT PAGE - LOGO - BLACK.svg?react';
+import FrissonIcon from './assets/F_LOGO.svg?react';
+import InstagramIcon from './assets/ig_icon.svg?react';
+import SpotifyIcon from './assets/spotify_icon.svg?react';
+import TikTokIcon from './assets/tiktok_icon.svg?react';
 
 
 const Contact: React.FC = () => {
@@ -49,16 +49,16 @@ const Contact: React.FC = () => {
     <div className="contact-page">
         <div className="corner-icons" ref={socialIconsRef}>
             <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
-            <RebrandFrissonIcon />
+            <FrissonIcon />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
-            <RebrandInstagramIcon />
+            <InstagramIcon />
             </a>
             <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
-            <RebrandSpotifyIcon />
+            <SpotifyIcon />
             </a>
             <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
-            <RebrandTikTokIcon />
+            <TikTokIcon />
             </a>
       </div>
       <div className="contact-text-top" ref={topTextRef}>
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
         <div className="contact-top-text">frissonprojects@gmail.com</div>
       </div>
       <div className="contact-logo" ref={logoRef}>
-        <RebrandLogo />
+        <Logo />
       </div>
       <div className="contact-text-bottom" ref={bottomTextRef}>
         <div className="contact-bottom-text">DM Us</div>

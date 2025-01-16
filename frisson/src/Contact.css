@@ -7,8 +7,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff; /* Match the blue background */
-    color: #003ce0;
+    background-color: #003CE0; /* Match the blue background */
+    color: #000000;
     font-family: "larken", sans-serif;
     overflow: hidden;
     text-align: center;
@@ -18,27 +18,35 @@
 
   .contact-text-top {
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between top text elements */
-    font-size: 4vw;
+    gap: 0px; /* Space between top text elements */
+    font-size: 5vw;
   }
+
+  .contact-text-top > * {
+    margin: -10px 0; /* Adjust the margin to reduce space */
+}
 
   .contact-text-bottom {
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Space between bottom text elements */
-    font-size: 4vw;
+    gap: 0px; /* Space between bottom text elements */
+    font-size: 5vw;
   }
+
+  .contact-text-bottom > * {
+    margin: -10px 0; /* Adjust the margin to reduce space */
+}
   
   
   .contact-logo {
@@ -63,4 +71,15 @@
   .corner-icons svg path {
     fill: #003ce0;
   }
+
+  .corner-icons a {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .corner-icons a svg {
+    width: 100%;
+    height: 100%;
+  }
+
   
