@@ -1,3 +1,5 @@
+
+
 /* Contact Page Styles */
 .contact-page {
     min-height: 100vh;
@@ -9,7 +11,9 @@
     justify-content: center;
     background-color: #003CE0; /* Match the blue background */
     color: #000000;
-    font-family: "larken", sans-serif;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     overflow: hidden;
     text-align: center;
   }

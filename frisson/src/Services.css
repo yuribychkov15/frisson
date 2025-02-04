@@ -1,0 +1,45 @@
+/* Make the contact page fill the viewport and center its contents */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative; /* so that any absolutely positioned child (like .corner-icons) is relative to this */
+  }
+  
+  /* Use flexbox to space out the two text blocks */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;         /* or 100% if you prefer */
+    max-width: 1200px;  /* limit the maximum width */
+    padding: 2rem;
+  }
+  
+  /* Responsive text blocks */
+  .services-text-top,
+  .services-text-bottom-one {
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    /* Put to the left side of the container */
+    text-align: left;
+    /* Use clamp to have a minimum, ideal, and maximum font size */
+    font-size: clamp(1rem, 2vw, 2.5rem);
+  }
+  
+  /* Optionally adjust inner elements similarly */
+  .services-top-text { 
+    font-size: clamp(1.5rem, 3vw, 3.4vw);
+  }
+  
+  .services-top-text-two,
+  .branding, 
+  .digital, 
+  .other {
+    font-size: clamp(0.8rem, 1.5vw, 1.1vw);
+  }
+  
