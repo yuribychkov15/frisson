@@ -1,45 +1,125 @@
-/* Make the contact page fill the viewport and center its contents */
+/* 1) Overall page container */
 .contact-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     min-height: 100vh;
-    position: relative; /* so that any absolutely positioned child (like .corner-icons) is relative to this */
+    background: #0000ff; /* for illustration, remove/adjust if needed */
   }
   
-  /* Use flexbox to space out the two text blocks */
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;         /* or 100% if you prefer */
-    max-width: 1200px;  /* limit the maximum width */
-    padding: 2rem;
+  /* 
+     2) A single wrapper so the top text and bottom columns 
+        share the same left margin on large screens.
+  */
+  .services-wrapper {
+    position: relative;
+    margin-left: clamp(5vw, 34vw, 655px); /* anchor at ~655px on large desktops */
+    padding: 3rem 0 4rem 0;               /* vertical spacing */
   }
   
-  /* Responsive text blocks */
-  .services-text-top,
-  .services-text-bottom-one {
-    width: 100%;
-    max-width: 800px;
-    padding: 1rem;
-    /* Put to the left side of the container */
+  /* 3) Top block for CREATIVE STRATEGY */
+  .services-text-top {
+    /* Keep everything inside the same container width as the paragraph. */
+    max-width: 770px;
+    margin-bottom: 3rem;
+  }
+  
+  .services-top-text {
+    /* Increase these clamp values so the heading can get larger
+       and potentially wrap to match the paragraph's line-length. */
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
     text-align: left;
-    /* Use clamp to have a minimum, ideal, and maximum font size */
-    font-size: clamp(1rem, 2vw, 2.5rem);
+    display: block;      /* Ensure it can expand full width */
+    width: 100%;         /* Fill the container */
+    word-wrap: break-word;
   }
   
-  /* Optionally adjust inner elements similarly */
-  .services-top-text { 
-    font-size: clamp(1.5rem, 3vw, 3.4vw);
+  .services-top-text-two {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.4;
+    text-align: left;
+    margin: 0;
   }
   
-  .services-top-text-two,
-  .branding, 
-  .digital, 
-  .other {
-    font-size: clamp(0.8rem, 1.5vw, 1.1vw);
+  /* 4) Bottom three-column block: bigger max-width container */
+  .services-text-bottom {
+    max-width: 1402px;
+  }
+  
+  /* The columns row */
+  .services-bottom-columns {
+    display: flex;
+    gap: clamp(1rem, 1vw, 20px);
+  }
+  
+  /* Each column can be up to 454px wide for large screens */
+  .services-column {
+    width: clamp(30vw, 28rem, 454px);
+    text-align: left;
+  }
+  
+  /* Make column headings bigger so “DESIGN” or “CONTENT” 
+     can stretch or even break if you want them to 
+     match the sub-block paragraphs below. */
+  .services-column h2 {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .sub-block {
+    margin-bottom: 1rem;
+  }
+  .sub-block h3 {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-bottom: 0.25rem;
+    font-family: "larken", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .sub-block p {
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    margin: 0;
+  }
+  
+  /* The EVENTS column only has one <p> block */
+  .events-column p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.4;
+  }
+  
+  /* 5) Media Query – stack columns on narrower screens */
+  @media (max-width: 1100px) {
+    .services-bottom-columns {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .services-column {
+      width: 100%;
+    }
+    
+    /* Bring wrapper in from the sides */
+    .services-wrapper {
+      margin-left: clamp(1rem, 5vw, 6rem);
+    }
+    .services-text-top,
+    .services-text-bottom {
+      max-width: 90%;
+    }
+  }
+  
+  /* 6) Corner social icons */
+  .corner-icons {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+  }
+  .corner-icons a {
+    pointer-events: auto; /* so they’re clickable */
   }
   
