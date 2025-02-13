@@ -12,6 +12,7 @@ import RebrandTikTokIcon from './assets/FRISSON - REBRAND - FINAL-06.svg?react';
 
 import Contact from './Contact'; // Import Contact page
 import Services from './Services';
+import Info from './Info';
 
 const LandingPage: React.FC = () => {
   const mainLogoRef = useRef<HTMLDivElement>(null);
@@ -59,7 +60,7 @@ const LandingPage: React.FC = () => {
         <nav className="menu-links">
           <a href="#projects" className="projects">PROJECTS</a>
           <a href="/services" className="services">SERVICES</a>
-          <a href="#info" className="info">INFO</a>
+          <a href="/info" className="info">INFO</a>
           <Link to="/contact" className="contact">CONTACT</Link>
         </nav>
       </div>
@@ -73,6 +74,7 @@ const App: React.FC = () => {
       <Route path="/" element={<LandingPage />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/info" element={<Info />} />
     </Routes>
   );
 };

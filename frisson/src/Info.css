@@ -1,0 +1,56 @@
+.info-page {
+    position: relative;
+    min-height: 100vh;
+    background: #0000ff; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow from the absolute-positioned GIF */
+}
+
+.corner-icons {
+    position: absolute; /* Position the icons absolutely */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 2; /* Ensure icons are above the GIF */
+}
+
+.corner-icons a {
+    display: block;
+    margin-bottom: 10px; /* Space between icons */
+}
+
+.content-section {
+    display: flex;
+    width: 100%;
+    height: 100%; /* Ensure it takes full height */
+}
+
+.text-content {
+    width: 50%; /* Take up 50% of the page */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 2rem; /* Adjust the size as needed */
+    text-align: center; /* Center the text horizontally */
+    padding-right: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    z-index: 1; /* Ensure text is above the GIF */
+}
+
+.gif-content {
+    width: 50%; /* Take up 50% of the page */
+    position: absolute; /* Position the GIF absolutely */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 0; /* Ensure GIF is behind the text and icons */
+}
+
+.gif-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the GIF covers the entire area */
+}
