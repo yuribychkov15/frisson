@@ -71,13 +71,14 @@ const LandingPage: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/info" element={<Info />} />
-      <Route path="/project" element={<Project />} />
-    </Routes>
+    // <Routes>
+    //   <Route path="/" element={<LandingPage />} />
+    //   <Route path="/contact" element={<Contact />} />
+    //   <Route path="/services" element={<Services />} />
+    //   <Route path="/info" element={<Info />} />
+    //   <Route path="/project" element={<Project />} />
+    // </Routes>
+      <div>Under maintenance</div>
   );
 };
 
