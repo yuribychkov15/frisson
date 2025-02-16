@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import './Project.css';
 
-import FrissonIcon from './assets/F_LOGO.svg?react';
+import FrissonIcon from './assets/f_logo.svg?react';
 import InstagramIcon from './assets/ig_icon.svg?react';
 import SpotifyIcon from './assets/spotify_icon.svg?react';
 import TikTokIcon from './assets/tiktok_icon.svg?react';
