@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import './Contact.css';
 import { gsap } from 'gsap';
 import Logo from './assets/FRISSON - CONTACT PAGE - LOGO - BLACK.svg?react';
-import FrissonIcon from './assets/F_LOGO.svg?react';
+// import FrissonIcon from './assets/F_LOGO.svg?react';
 import InstagramIcon from './assets/ig_icon.svg?react';
 import SpotifyIcon from './assets/spotify_icon.svg?react';
 import TikTokIcon from './assets/tiktok_icon.svg?react';
@@ -48,9 +48,9 @@ const Contact: React.FC = () => {
   return (
     <div className="contact-page">
         <div className="corner-icons" ref={socialIconsRef}>
-            <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
+            {/* <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
             <FrissonIcon />
-            </a>
+            </a> */}
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
             <InstagramIcon />
             </a>
