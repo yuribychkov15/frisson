@@ -1,6 +1,3 @@
-
-
-/* Contact Page Styles */
 .contact-page {
     min-height: 100vh;
     width: 100vw;
@@ -9,81 +6,149 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #003CE0; /* Match the blue background */
-    color: #000000;
-    font-family: "neue-haas-grotesk-display", sans-serif;
-    font-weight: 600;
-    font-style: normal;
+    background-color: #0037FF;
+    color: black;
     overflow: hidden;
+}
+
+/* Text Sections */
+.contact-text-top,
+.contact-text-bottom {
+    position: absolute;
+    width: 100%;
     text-align: center;
-  }
-  
-
-
-  .contact-text-top {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0px; /* Space between top text elements */
-    font-size: 5vw;
-  }
-
-  .contact-text-top > * {
-    margin: -10px 0; /* Adjust the margin to reduce space */
+    left: 0;
 }
 
-  .contact-text-bottom {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0px; /* Space between bottom text elements */
-    font-size: 5vw;
-  }
-
-  .contact-text-bottom > * {
-    margin: -10px 0; /* Adjust the margin to reduce space */
+.contact-text-top {
+    top: 8%;
 }
-  
-  
-  .contact-logo {
+
+.contact-text-bottom {
+    bottom: 8%;
+}
+
+.contact-top-text,
+.contact-bottom-text {
+    font-size: min(5vw, 4rem); /* Increased base font size */
+    margin: 0.5rem 0;
+    text-transform: uppercase;
+}
+
+/* Logo */
+.contact-logo {
     position: absolute;
+    left: 50%;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw; /* Make it responsive */
-    height: 80vw; /* Match width for a square aspect ratio */
-    max-width: 150vh; /* Prevent it from growing too large */
-    max-height: 150vh; /* Maintain aspect ratio at large sizes */
+    width: 70%; /* Increased base width */
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .contact-logo svg {
+}
+
+.contact-logo svg {
+    width: 100%;
+    height: auto;
+}
+
+/* Corner Icons */
+.corner-icons {
+    position: fixed;
     width: 100%;
     height: 100%;
-  }
+    pointer-events: none;
+}
 
-  .corner-icons svg path {
-    fill: #003ce0;
-  }
+.corner-icons a {
+    position: absolute;
+    width: min(5vw, 48px);
+    height: min(5vw, 48px);
+    pointer-events: auto;
+}
 
-  .corner-icons a {
-    width: 2vw;
-    height: 2vw;
-  }
+.top-left {
+    top: 20px;
+    left: 20px;
+}
 
-  .corner-icons a svg {
-    width: 100%;
-    height: 100%;
-  }
+.top-right {
+    top: 20px;
+    right: 20px;
+}
 
-  
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+    .contact-logo {
+        width: 85%;
+    }
+    
+    .contact-top-text,
+    .contact-bottom-text {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .contact-logo {
+        width: 80%;
+        top: 50%;
+    }
+    
+    .contact-top-text,
+    .contact-bottom-text {
+        font-size: 4rem;
+    }
+
+    .contact-bottom-text {
+        bottom: 15%;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
+    .contact-logo {
+        width: 55%;
+        top: 50%;
+    }
+    
+    .contact-top-text,
+    .contact-bottom-text {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .contact-logo {
+        width: 50%;
+        min-width: 827px;
+        top: 50%;
+    }
+    
+    .contact-top-text,
+    .contact-bottom-text {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .contact-logo {
+        width: 75%;
+        max-width: 1500px;
+    }
+    
+    .contact-top-text,
+    .contact-bottom-text {
+        font-size: 5rem;
+    }
+}

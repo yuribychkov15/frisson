@@ -7,7 +7,6 @@ import InstagramIcon from './assets/ig_icon.svg?react';
 import SpotifyIcon from './assets/spotify_icon.svg?react';
 import TikTokIcon from './assets/tiktok_icon.svg?react';
 
-
 const Contact: React.FC = () => {
   const logoRef = useRef<HTMLDivElement>(null);
   const topTextRef = useRef<HTMLDivElement>(null);
@@ -19,27 +18,21 @@ const Contact: React.FC = () => {
       // Logo shrinking animation
       gsap.fromTo(
         logoRef.current,
-        { scale: 1 },
-        { scale: 0.5, duration: 2, ease: "power2.inOut" }
+        { scale: 1.5 }, // Start larger
+        { scale: 1, duration: 2, ease: "power2.inOut" } // Resting state smaller
       );
 
+      // Fade-in for social icons
       gsap.fromTo(
         socialIconsRef.current.querySelectorAll('a'),
         { opacity: 0 },
         { opacity: 1, duration: 1.5, ease: "power2.out", stagger: 0.2, delay: 0.5 }
       );
 
-      // Fade-in for the text
+      // Fade-in for text
       gsap.fromTo(
-        bottomTextRef.current.querySelectorAll('.contact-bottom-text'),
+        [topTextRef.current, bottomTextRef.current],
         { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 1.5, ease: "power2.out", stagger: 0.3 }
-      );
-
-      // Fade-in for other text
-      gsap.fromTo(
-        topTextRef.current.querySelectorAll('.contact-top-text'),
-        { opacity: 0, y: -20 },
         { opacity: 1, y: 0, duration: 1.5, ease: "power2.out", stagger: 0.3 }
       );
     }
@@ -47,19 +40,19 @@ const Contact: React.FC = () => {
 
   return (
     <div className="contact-page">
-        <div className="corner-icons" ref={socialIconsRef}>
-            <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
-            <FrissonIcon />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
-            <InstagramIcon />
-            </a>
-            <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
-            <SpotifyIcon />
-            </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
-            <TikTokIcon />
-            </a>
+      <div className="corner-icons" ref={socialIconsRef}>
+        <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
+          <FrissonIcon />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
+          <InstagramIcon />
+        </a>
+        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
+          <SpotifyIcon />
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
+          <TikTokIcon />
+        </a>
       </div>
       <div className="contact-text-top" ref={topTextRef}>
         <div className="contact-top-text">Email us</div>
