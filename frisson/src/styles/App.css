@@ -184,58 +184,8 @@
   color: #555; /* Change color on hover */
 }
 
-/* Corner Social Icons */
-.corner-icons a {
-  position: fixed;
-  margin: 20px; /* Equal spacing around the icons */
-  display: flex; /* Ensures content inside the link stays aligned */
-  justify-content: center;
-  align-items: center;
-  width: 24px; /* Set the size of the container */
-  height: 24px;
-  transition: transform 0.3s ease; /* Add hover animation */
-}
-
-.corner-icons svg {
-  width: 24px; /* Explicitly set icon width */
-  height: 24px; /* Explicitly set icon height */
-  fill: black; /* Set the color */
-}
-
-.corner-icons .top-left {
-  top: 0;
-  left: 0;
-  margin: 20px; /* Equal margin for top and left */
-}
-
-.corner-icons .top-right {
-  top: 0;
-  right: 0;
-  margin: 20px; /* Equal margin for top and right */
-}
-
-.corner-icons .bottom-right {
-  bottom: 0;
-  right: 0;
-  margin: 20px; /* Equal margin for bottom and right */
-}
-
-.corner-icons .bottom-left {
-  bottom: 0;
-  left: 0;
-  margin: 20px; /* Equal margin for bottom and left */
-}
-
-
-/* SVG Path Fill Color */
-.corner-icons svg path,
 .main-logo-container svg path {
   fill: #000000;
-}
-
-/* Hover Effects for Social Icons */
-.corner-icons a:hover {
-  transform: scale(1.2); /* Scale up slightly on hover */
 }
 
 /* Basic Reset */

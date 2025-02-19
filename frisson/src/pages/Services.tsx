@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import '../styles/Services.css';
+import '../styles/cornerIcons.css';
 
 import FrissonIcon from '../assets/f_logo.svg?react';
 import InstagramIcon from '../assets/ig_icon.svg?react';

@@ -1,6 +1,7 @@
 // import React, { useRef, useEffect } from 'react';
 // import { Routes, Route, Link } from 'react-router-dom';
 // import '../styles/App.css';
+// import '../styles/cornerIcons.css'
 // import { gsap } from 'gsap';
 
 // import RebrandLogo from '../assets/FRISSON LOGO - HOME - BLUE.svg?react';
