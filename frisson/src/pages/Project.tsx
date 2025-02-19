@@ -2,10 +2,15 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import '../styles/Project.css';
 
-import FrissonIcon from '../assets/f_logo.svg?react';
-import InstagramIcon from '../assets/ig_icon.svg?react';
-import SpotifyIcon from '../assets/spotify_icon.svg?react';
-import TikTokIcon from '../assets/tiktok_icon.svg?react';
+import FrissonBlueIcon from '../assets/FRISSON - F ICON - BLUE.png';
+import InstaBlueIcon from '../assets/FRISSON - INSTA ICON - BLUE.png';
+import TikTokBlueIcon from '../assets/FRISSON-TIKTOK ICON - BLUE.png';
+import SpotifyBlueIcon from '../assets/FRISSON - SPOTIFY - BLUE.png';
+
+
+import Project2Video from '../assets/WEBSITE - PROJECT CARD - SOPHIA MESSA - PUTP.mp4';
+
+
 import Logo from '../assets/FRISSON - CONTACT PAGE - LOGO - BLACK.svg?react'; // Your dotted frisson logo
 
 import ProjectImage1 from '../assets/Mask Group 6.jpg';
@@ -33,24 +38,49 @@ const Project: React.FC = () => {
       {/* Corner social icons */}
       <div className="corner-icons" ref={socialIconsRef}>
         <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
-          <FrissonIcon />
+          <img src={FrissonBlueIcon} alt="Frisson Icon" className="corner-icons"/>
         </a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
-          <InstagramIcon />
+          <img src={InstaBlueIcon} alt="Instagram Icon" className="corner-icons"/>
         </a>
         <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
-          <SpotifyIcon />
+          <img src={SpotifyBlueIcon} alt="Spotify Icon" className="corner-icons"/>
         </a>
         <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
-          <TikTokIcon />
+          <img src={TikTokBlueIcon} alt="TikTok Icon" className="corner-icons"/>
         </a>
       </div>
 
       {/* Content Section */}
       <div className="content-section">
         <div className="project-grid">
+
           {/* First Project Item */}
           <div className="project-item">
+            <div className="project-image-container">
+              <img src={ProjectImage1} alt="KEFI SERIES #1" className="project1-image" />
+            </div>
+            <div className="project-info">
+              <div className="project-title">KEFI SERIES #1</div>
+              <div className="project-subtitle">Photo Synthetic</div>
+            </div>
+          </div>
+          {/* Second Project Item - Replaced with MP4 */}
+          <div className="project-item">
+            <div className="project-image-container">
+              <video controls className="project-video">
+                <source src={Project2Video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="project-info">
+              <div className="project-title">Video Title</div>
+              <div className="project-subtitle">Video Subtitle</div>
+            </div>
+          </div>
+          {/* Third Project Item */}
+          
+          {/* <div className="project-item">
             <div className="project-image-container">
               <img src={ProjectImage1} alt="KEFI SERIES #1" className="project-image" />
             </div>
@@ -58,7 +88,19 @@ const Project: React.FC = () => {
               <div className="project-title">KEFI SERIES #1</div>
               <div className="project-subtitle">Photo Synthetic</div>
             </div>
-          </div>
+          </div> */}
+
+          {/* Fourth Project Item */}
+          {/* <div className="project-item">
+            <div className="project-image-container">
+              <img src={ProjectImage1} alt="KEFI SERIES #1" className="project-image" />
+            </div>
+            <div className="project-info">
+              <div className="project-title">KEFI SERIES #1</div>
+              <div className="project-subtitle">Photo Synthetic</div>
+            </div>
+          </div> */}
+
         </div>
       </div>
     </div>

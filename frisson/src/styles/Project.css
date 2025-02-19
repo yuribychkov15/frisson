@@ -2,12 +2,11 @@
     position: relative;
     min-height: 100vh;
     width: 100vw;
-    background-color: #ffffff;
+    background-color: #000000;
     color: #0037FF;
-    overflow: hidden;
-}
+    overflow: auto;
+  }
 
-/* Background Logo Styling */
 .project-logo {
     position: fixed;
     top: 50%;
@@ -15,66 +14,119 @@
     transform: translate(-50%, -50%);
     width: 60vw;
     height: auto;
-    z-index: 0; /* Changed from 1 to 0 to ensure it stays behind */
+    z-index: 0;
     pointer-events: none;
-    display: flex; /* Added for better centering */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.project-logo svg path {
+  
+  /* Background Logo Styling */
+  .project-logo svg path {
     fill: #0037FF !important;
 }
-
-
-/* Content Section */
-.content-section {
+  
+  /* Content Section */
+  .content-section {
     position: relative;
-    z-index: 1; /* Changed from 2 to 1 since logo is now 0 */
-    padding: 20px;
-}
-
-.project-grid {
+    z-index: 1;
+    padding: 0;
+    width: 100%;
+    min-height: 200vh; /* Ensure there's room to scroll */
+  }
+  
+  .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 60px;
-}
-
-.project-item {
+    grid-template-columns: 1fr 1fr;
     position: relative;
-    margin-bottom: 40px;
-}
-
-.project-image-container {
     width: 100%;
-    overflow: hidden;
-    background-color: #000000;
-}
-
-.project-image {
+    padding: 0 60px;
+    column-gap: 178px; /* Specific gap between projects */
+  }
+  
+  /* First Project Item Styling */
+  .project-grid .project-item:first-child {
+    margin-top: 86px; /* Distance from top of screen */
+    margin-left: 40px;
+  }
+  
+  .project-grid .project-item:first-child .project-image-container {
+    width: 770px;
+    height: 1156px;
+  }
+  
+  .project-grid .project-item:first-child .project1-image {
     width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.3s ease;
-}
-
-.project-info {
-    margin-top: 10px;
-}
-
-.project-title {
-    font-size: 1rem;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Second Project Item Styling */
+  .project-grid .project-item:nth-child(2) {
+    margin-top: 709px; /* Distance from top of screen */
+    margin-left: 100px;
+  }
+  
+  .project-grid .project-item:nth-child(2) .project-image-container {
+    width: 612px;
+    height: 800px;
+  }
+  
+  .project-grid .project-item:nth-child(2) .project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    margin-top: 16px;
+  }
+  
+  .project-title {
+    font-size: 1.125rem;
     color: #0037FF;
-}
-
-.project-subtitle {
-    font-size: 0.9rem;
-    margin-top: 4px;
-}
-
-/* Corner Icons Color */
-.corner-icons svg path {
-    fill: #0037FF !important;
-    stroke: #0037FF !important; /* Just in case it's using stroke */
+    margin-bottom: 4px;
+  }
+  
+  .project-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1600px) {
+    .project-grid {
+      padding: 0 40px;
+      column-gap: 100px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .project-grid {
+      padding: 0 20px;
+      column-gap: 60px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+      padding: 0 20px;
+    }
+  
+    .project-grid .project-item:first-child,
+    .project-grid .project-item:nth-child(2) {
+      margin-top: 40px;
+    }
+  
+    .project-grid .project-item:first-child .project-image-container,
+    .project-grid .project-item:nth-child(2) .project-image-container {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 770/1156;
+    }
+  
+    .project-grid .project-item:nth-child(2) .project-image-container {
+      aspect-ratio: 612/800;
+    }
   }

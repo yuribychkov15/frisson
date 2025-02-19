@@ -48,3 +48,15 @@ Corner Social Icons
 .corner-icons svg path {
     fill: #000000;
 }
+
+.corner-icons img {
+    width: 35px;
+    height: 35px;
+}
+
+.corner-icons .top-left img {
+    width: 10px; 
+    height: 20px; 
+    transform: scale(1.5);
+    left: 2%;
+}
