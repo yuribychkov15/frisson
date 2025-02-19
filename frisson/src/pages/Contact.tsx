@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import './Contact.css';
+import '../styles/Contact.css';
 import { gsap } from 'gsap';
-import Logo from './assets/FRISSON - CONTACT PAGE - LOGO - BLACK.svg?react';
-import FrissonIcon from './assets/f_logo.svg?react';
-import InstagramIcon from './assets/ig_icon.svg?react';
-import SpotifyIcon from './assets/spotify_icon.svg?react';
-import TikTokIcon from './assets/tiktok_icon.svg?react';
+import Logo from '../assets/FRISSON - CONTACT PAGE - LOGO - BLACK.svg?react';
+import FrissonIcon from '../assets/f_logo.svg?react';
+import InstagramIcon from '../assets/ig_icon.svg?react';
+import SpotifyIcon from '../assets/spotify_icon.svg?react';
+import TikTokIcon from '../assets/tiktok_icon.svg?react';
 
 const Contact: React.FC = () => {
   const logoRef = useRef<HTMLDivElement>(null);

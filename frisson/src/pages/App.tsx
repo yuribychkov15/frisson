@@ -1,13 +1,13 @@
 // import React, { useRef, useEffect } from 'react';
 // import { Routes, Route, Link } from 'react-router-dom';
-// import './App.css';
+// import '../styles/App.css';
 // import { gsap } from 'gsap';
 
-// import RebrandLogo from './assets/FRISSON LOGO - HOME - BLUE.svg?react';
-// import RebrandFrissonIcon from './assets/FRISSON - REBRAND - FINAL-01.svg?react';
-// import RebrandInstagramIcon from './assets/FRISSON - REBRAND - FINAL-04.svg?react';
-// import RebrandSpotifyIcon from './assets/FRISSON - REBRAND - FINAL-05.svg?react';
-// import RebrandTikTokIcon from './assets/FRISSON - REBRAND - FINAL-06.svg?react';
+// import RebrandLogo from '../assets/FRISSON LOGO - HOME - BLUE.svg?react';
+// import RebrandFrissonIcon from '../assets/FRISSON - REBRAND - FINAL-01.svg?react';
+// import RebrandInstagramIcon from '../assets/FRISSON - REBRAND - FINAL-04.svg?react';
+// import RebrandSpotifyIcon from '../assets/FRISSON - REBRAND - FINAL-05.svg?react';
+// import RebrandTikTokIcon from '../assets/FRISSON - REBRAND - FINAL-06.svg?react';
 
 
 // import Contact from './Contact'; // Import Contact page

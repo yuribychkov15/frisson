@@ -30,6 +30,7 @@
 
 .contact-top-text,
 .contact-bottom-text {
+    font-family: var(--font-coconat); /* Using CSS variable */
     font-size: min(5vw, 4rem); /* Increased base font size */
     margin: 0.5rem 0;
     text-transform: uppercase;
@@ -119,7 +120,20 @@
 @media screen and (min-width: 1025px) and (max-width: 1919px) {
     .contact-logo {
         width: 55%;
-        top: 50%;
+        top: 45%;
+    }
+    
+    .contact-top-text,
+    .contact-bottom-text {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .contact-logo {
+        width: 50%;
+        min-width: 827px;
+        top: 45%;
     }
     
     .contact-top-text,
@@ -128,23 +142,11 @@
     }
 }
 
-@media screen and (min-width: 1920px) {
-    .contact-logo {
-        width: 50%;
-        min-width: 827px;
-        top: 50%;
-    }
-    
-    .contact-top-text,
-    .contact-bottom-text {
-        font-size: 6rem;
-    }
-}
-
 @media screen and (min-width: 2560px) {
     .contact-logo {
-        width: 75%;
+        width: 60%;
         max-width: 1500px;
+        top: 40%;
     }
     
     .contact-top-text,

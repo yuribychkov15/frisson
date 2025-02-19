@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import './Services.css';
+import '../styles/Services.css';
 
-import FrissonIcon from './assets/f_logo.svg?react';
-import InstagramIcon from './assets/ig_icon.svg?react';
-import SpotifyIcon from './assets/spotify_icon.svg?react';
-import TikTokIcon from './assets/tiktok_icon.svg?react';
+import FrissonIcon from '../assets/f_logo.svg?react';
+import InstagramIcon from '../assets/ig_icon.svg?react';
+import SpotifyIcon from '../assets/spotify_icon.svg?react';
+import TikTokIcon from '../assets/tiktok_icon.svg?react';
 
 const Services: React.FC = () => {
   const socialIconsRef = useRef<HTMLDivElement>(null);

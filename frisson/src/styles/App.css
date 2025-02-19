@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'Aktiv Grotesk';
-  src: url('/assets/fonts/AktivGrotesk-Regular.woff2') format('woff2'),
-       url('/assets/fonts/AktivGrotesk-Regular.woff') format('woff');
-  font-weight: normal; /* Regular */
-  font-style: normal;
-}
-
 
 /* Responsive adjustments for smaller screens */
 /* Ensure Menu Links Scale with Logo Dynamically */
@@ -117,7 +109,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #003CE0;
   color: #003CE0;
   overflow: hidden;
 }
@@ -156,7 +148,7 @@
 .menu-links a {
   position: absolute;
   text-decoration: none;
-  color: #003CE0;
+  color: #000000;
   pointer-events: auto; /* Re-enable clicking for links */
   white-space: nowrap; /* Prevent text wrapping */
   transition: color 0.3s ease;
@@ -238,7 +230,7 @@
 /* SVG Path Fill Color */
 .corner-icons svg path,
 .main-logo-container svg path {
-  fill: #003CE0;
+  fill: #000000;
 }
 
 /* Hover Effects for Social Icons */

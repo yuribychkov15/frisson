@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import './Project.css';
+import '../styles/Info.css';
 
-import FrissonIcon from './assets/f_logo.svg?react';
-import InstagramIcon from './assets/ig_icon.svg?react';
-import SpotifyIcon from './assets/spotify_icon.svg?react';
-import TikTokIcon from './assets/tiktok_icon.svg?react';
+import FrissonIcon from '../assets/f_logo.svg?react';
+import InstagramIcon from '../assets/ig_icon.svg?react';
+import SpotifyIcon from '../assets/spotify_icon.svg?react';
+import TikTokIcon from '../assets/tiktok_icon.svg?react';
 
-import InfoGif from './assets/FRISSON-WEBSITE-INFO-GIF.gif';
+import InfoGif from '../assets/FRISSON-WEBSITE-INFO-GIF.gif';
 
-const Project: React.FC = () => {
+const Info: React.FC = () => {
   const socialIconsRef = useRef<HTMLDivElement>(null);
   const gifRef = useRef<HTMLDivElement>(null);
 
@@ -32,7 +32,7 @@ const Project: React.FC = () => {
   }, []);
 
   return (
-    <div className="project-page">
+    <div className="info-page">
       {/* Corner social icons */}
       <div className="corner-icons" ref={socialIconsRef}>
         <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
@@ -71,4 +71,4 @@ const Project: React.FC = () => {
   );
 };
 
-export default Project;
+export default Info;
