@@ -1,63 +1,80 @@
 .project-page {
     position: relative;
     min-height: 100vh;
-    background: #000000; /* Adjust as needed */
-    color: #0000ff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    overflow: hidden; /* Prevent overflow from the absolute-positioned GIF */
-}
-
-.corner-icons {
-    position: absolute; /* Position the icons absolutely */
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    z-index: 2; /* Ensure icons are above the GIF */
-}
-
-.corner-icons svg {
-    fill: #0000ff; /* Set the color */
-  }
-
-.corner-icons a {
-    display: block;
-    margin-bottom: 10px; /* Space between icons */
-}
-
-  
-
-.content-section {
-    display: flex;
-    width: 100%;
-    height: 100%; /* Ensure it takes full height */
-}
-
-.text-content {
-    width: 50%; /* Take up 50% of the page */
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    font-size: 2rem; /* Adjust the size as needed */
-    text-align: center; /* Center the text horizontally */
-    padding-right: 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    z-index: 1; /* Ensure text is above the GIF */
-}
-
-.gif-content {
-    width: 50%; /* Take up 50% of the page */
-    position: absolute; /* Position the GIF absolutely */
-    top: 0;
-    right: 0;
-    bottom: 0;
+    width: 100vw;
+    background-color: #ffffff;
+    color: #0037FF;
     overflow: hidden;
-    z-index: 0; /* Ensure GIF is behind the text and icons */
 }
 
-.gif-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the GIF covers the entire area */
+/* Background Logo Styling */
+.project-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: auto;
+    z-index: 0; /* Changed from 1 to 0 to ensure it stays behind */
+    pointer-events: none;
+    display: flex; /* Added for better centering */
+    justify-content: center;
+    align-items: center;
 }
+
+.project-logo svg path {
+    fill: #0037FF !important;
+}
+
+
+/* Content Section */
+.content-section {
+    position: relative;
+    z-index: 1; /* Changed from 2 to 1 since logo is now 0 */
+    padding: 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 60px;
+}
+
+.project-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.project-image-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.project-info {
+    margin-top: 10px;
+}
+
+.project-title {
+    font-size: 1rem;
+    color: #0037FF;
+}
+
+.project-subtitle {
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* Corner Icons Color */
+.corner-icons svg path {
+    fill: #0037FF !important;
+    stroke: #0037FF !important; /* Just in case it's using stroke */
+  }

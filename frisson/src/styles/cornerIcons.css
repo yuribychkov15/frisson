@@ -1,4 +1,4 @@
-/* Corner Social Icons */
+Corner Social Icons
 .corner-icons {
     position: fixed;
     width: 100%;
@@ -14,26 +14,26 @@
 }
 
 .corner-icons .top-left {
-    top: 0%;
-    left: 2%;
+    top: 2%;
+    left: 1%;
 }
 
 .corner-icons .top-right {
-    top: 1%;
+    top: 1.5%;
     right: 0%;
 }
 
 .corner-icons .bottom-left {
-    bottom: 2%;
-    left: 2.5%;
+    bottom: 1.5%;
+    left: 1.5%;
 }
 
 .corner-icons .bottom-right {
-    bottom: 2%;
+    bottom: 1.5%;
     right: 0%;
 }
 
-/* SVG size and color */
+
 .corner-icons svg {
     width: 35px;
     height: 35px;
@@ -41,11 +41,10 @@
 }
 
 .corner-icons .top-left svg {
-    width: 45px;  /* Increased from 24px */
-    height: 45px; /* Increased from 24px */
+    width: 45px; 
+    height: 45px; 
 }
   
-  /* SVG Path Fill Color */
 .corner-icons svg path {
     fill: #000000;
 }
