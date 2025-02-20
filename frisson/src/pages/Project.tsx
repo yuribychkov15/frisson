@@ -87,7 +87,7 @@ const Project: React.FC = () => {
               <img src={Project3Imaage} alt="Guerilla Marketing" className="project3-image" />
             </div>
             <div className="project3-info">
-              <div className="project-title">Chloe Southern</div>
+              <Link to="/chloe2" className="project-title">Chloe Southern</Link>
               <div className="project-subtitle">GUERILLA MARKETING</div>
             </div>
           </div>
