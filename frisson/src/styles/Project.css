@@ -1,13 +1,21 @@
-.project-page {
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .project-page {
     position: relative;
-    min-height: 100vh;
     width: 100vw;
     background-color: #000000;
     color: #0037FF;
     overflow: auto;
+    height: auto;
+    min-height: 3500px;
   }
-
-.project-logo {
+  
+  .project-logo {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -19,52 +27,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
   
-  /* Background Logo Styling */
   .project-logo svg path {
     fill: #0037FF !important;
-}
+  }
   
-  /* Content Section */
   .content-section {
     position: relative;
     z-index: 1;
-    padding: 0;
     width: 100%;
-    min-height: 200vh; /* Ensure there's room to scroll */
+    height: auto;
   }
   
   .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     position: relative;
     width: 100%;
-    padding: 0 60px;
-    column-gap: 178px; /* Specific gap between projects */
+    height: auto;
+    min-height: 3500px;
   }
   
-  /* First Project Item Styling */
-  .project-grid .project-item:first-child {
-    margin-top: 86px; /* Distance from top of screen */
-    margin-left: 40px;
+  /* Base styles for 1920x1080 */
+  .project-grid .project-item {
+    position: absolute;
   }
   
-  .project-grid .project-item:first-child .project-image-container {
+  /* First Project */
+  .project-grid .project-item:nth-child(1) {
+    margin-top: 86px;
+    top: 0;
+    left: 180px;
+  }
+  
+  .project-grid .project-item:nth-child(1) .project-image-container {
     width: 770px;
     height: 1156px;
   }
   
-  .project-grid .project-item:first-child .project1-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Second Project Item Styling */
+  /* Second Project */
   .project-grid .project-item:nth-child(2) {
-    margin-top: 709px; /* Distance from top of screen */
-    margin-left: 100px;
+    margin-top: 709px;
+    top: 0;
+    right: 180px;
   }
   
   .project-grid .project-item:nth-child(2) .project-image-container {
@@ -72,13 +76,47 @@
     height: 800px;
   }
   
-  .project-grid .project-item:nth-child(2) .project-video {
+  /* Third Project */
+  .project-grid .project-item:nth-child(3) {
+    margin-top: 1558px;
+    top: 0;
+    left: 22px;
+  }
+  
+  .project-grid .project-item:nth-child(3) .project-image-container {
+    width: 770px;
+    height: 963px;
+  }
+  
+  /* Fourth Project */
+  .project-grid .project-item:nth-child(4) {
+    margin-top: 1889px;
+    top: 0;
+    left: 970px;
+  }
+  
+  .project-grid .project-item:nth-child(4) .project-image-container {
+    width: 770px;
+    height: 1146px;
+  }
+  
+  /* Common image/video styles */
+  .project1-image,
+  .project2-video,
+  .project3-image,
+  .project4-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .project-info {
+  /* Project Info Styles */
+  .project1-info,
+  .project2-info,
+  .project3-info,
+  .project4-info {
+    position: relative;
+    z-index: 1;
     margin-top: 16px;
   }
   
@@ -93,40 +131,111 @@
     opacity: 0.9;
   }
   
-  /* Responsive Design */
-  @media (max-width: 1600px) {
-    .project-grid {
-      padding: 0 40px;
-      column-gap: 100px;
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .project-grid {
-      padding: 0 20px;
-      column-gap: 60px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .project-grid {
-      grid-template-columns: 1fr;
-      padding: 0 20px;
+  /* 2560x1440 */
+  @media screen and (min-width: 2560px) {
+    .project-page {
+      min-height: 4655px;
     }
   
-    .project-grid .project-item:first-child,
+    .project-grid .project-item {
+      transform-origin: top left;
+    }
+  
+    .project-grid .project-item:nth-child(1) {
+      left: 240px;
+      margin-top: 114px;
+    }
+  
     .project-grid .project-item:nth-child(2) {
-      margin-top: 40px;
+      right: 240px;
+      margin-top: 943px;
     }
   
-    .project-grid .project-item:first-child .project-image-container,
-    .project-grid .project-item:nth-child(2) .project-image-container {
+    .project-grid .project-item:nth-child(3) {
+      left: 29px;
+      margin-top: 2072px;
+    }
+  
+    .project-grid .project-item:nth-child(4) {
+      left: 1290px;
+      margin-top: 2512px;
+    }
+  
+    .project-grid .project-item .project-image-container {
+      transform: scale(1.33);
+      transform-origin: top left;
+    }
+  
+    /* Project Info margins for scaled content */
+    .project1-info {
+      margin-top: calc(16px + (1156px * 0.33));
+    }
+  
+    .project2-info {
+      margin-top: calc(16px + (800px * 0.33));
+    }
+  
+    .project3-info {
+      margin-top: calc(16px + (963px * 0.33));
+    }
+  
+    .project4-info {
+      margin-top: calc(16px + (1146px * 0.33));
+    }
+  }
+  
+  /* Below 1920x1080 - Stack Layout */
+  @media screen and (max-width: 1919px) {
+    .project-page,
+    .project-grid {
+      min-height: 4500px;
+    }
+  
+    .project-grid .project-item {
+      position: relative;
+      margin-top: 40px !important;
+      left: 50% !important;
+      right: auto !important;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 800px;
+    }
+  
+    .project-grid .project-item .project-image-container {
       width: 100%;
       height: auto;
+      transform: none;
+    }
+  
+    .project-grid .project-item:nth-child(1) .project-image-container {
       aspect-ratio: 770/1156;
     }
   
     .project-grid .project-item:nth-child(2) .project-image-container {
       aspect-ratio: 612/800;
+    }
+  
+    .project-grid .project-item:nth-child(3) .project-image-container {
+      aspect-ratio: 770/963;
+    }
+  
+    .project-grid .project-item:nth-child(4) .project-image-container {
+      aspect-ratio: 770/1146;
+    }
+  
+    /* Project Info styles for stacked layout */
+    .project1-info,
+    .project2-info,
+    .project3-info,
+    .project4-info {
+      margin-top: 16px;
+    }
+  
+    .project-title {
+      font-size: 1rem;
+    }
+  
+    .project-subtitle {
+      font-size: 0.875rem;
     }
   }

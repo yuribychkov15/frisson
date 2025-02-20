@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 import '../styles/Project.css';
 
 import FrissonBlueIcon from '../assets/FRISSON - F ICON - BLUE.png';
@@ -7,13 +8,12 @@ import InstaBlueIcon from '../assets/FRISSON - INSTA ICON - BLUE.png';
 import TikTokBlueIcon from '../assets/FRISSON-TIKTOK ICON - BLUE.png';
 import SpotifyBlueIcon from '../assets/FRISSON - SPOTIFY - BLUE.png';
 
-
-import Project2Video from '../assets/WEBSITE - PROJECT CARD - SOPHIA MESSA - PUTP.mp4';
-
-
 import Logo from '../assets/FRISSON - CONTACT PAGE - LOGO - BLACK.svg?react'; // Your dotted frisson logo
 
-import ProjectImage1 from '../assets/Mask Group 6.jpg';
+import Project1Image from '../assets/Mask Group 6.jpg';
+import Project2Video from '../assets/WEBSITE - PROJECT CARD - SOPHIA MESSA - PUTP.mp4';
+import Project3Imaage from '../assets/gray-simple-textured-design-background_53876-108318.png';
+import Project4Video from '../assets/WEBSITE - PROJECT CARD - LIZ STUART - HSE.mp4';
 
 const Project: React.FC = () => {
   const socialIconsRef = useRef<HTMLDivElement>(null);
@@ -58,48 +58,52 @@ const Project: React.FC = () => {
           {/* First Project Item */}
           <div className="project-item">
             <div className="project-image-container">
-              <img src={ProjectImage1} alt="KEFI SERIES #1" className="project1-image" />
+              <img src={Project1Image} alt="KEFI SERIES #1" className="project1-image" />
             </div>
-            <div className="project-info">
-              <div className="project-title">KEFI SERIES #1</div>
-              <div className="project-subtitle">Photo Synthetic</div>
+            <div className="project1-info">
+              <Link to="/chloe-southern" className="project-title">Chloe Southern</Link>
+              <div className="project-subtitle">KEFI SERIES #1</div>
             </div>
           </div>
-          {/* Second Project Item - Replaced with MP4 */}
+
+          {/* Second Project Item */}
           <div className="project-item">
             <div className="project-image-container">
-              <video controls className="project-video">
+              <video controls className="project2-video">
                 <source src={Project2Video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="project-info">
-              <div className="project-title">Video Title</div>
-              <div className="project-subtitle">Video Subtitle</div>
+            <div className="project2-info">
+              <Link to="/sophia-messa" className="project-title">Sophia Messa</Link>
+              <div className="project-subtitle">PICK UP THE PHONE</div>
             </div>
           </div>
+
           {/* Third Project Item */}
-          
-          {/* <div className="project-item">
+          <div className="project-item">
             <div className="project-image-container">
-              <img src={ProjectImage1} alt="KEFI SERIES #1" className="project-image" />
+              <img src={Project3Imaage} alt="Guerilla Marketing" className="project3-image" />
             </div>
-            <div className="project-info">
-              <div className="project-title">KEFI SERIES #1</div>
-              <div className="project-subtitle">Photo Synthetic</div>
+            <div className="project3-info">
+              <div className="project-title">Chloe Southern</div>
+              <div className="project-subtitle">GUERILLA MARKETING</div>
             </div>
-          </div> */}
+          </div>
 
           {/* Fourth Project Item */}
-          {/* <div className="project-item">
+          <div className="project-item">
             <div className="project-image-container">
-              <img src={ProjectImage1} alt="KEFI SERIES #1" className="project-image" />
+              <video controls className="project4-video">
+                <source src={Project4Video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <div className="project-info">
-              <div className="project-title">KEFI SERIES #1</div>
-              <div className="project-subtitle">Photo Synthetic</div>
+            <div className="project4-info">
+              <div className="project-title">Liz Stuart</div>
+              <div className="project-subtitle">HOTTEST SUMMER EVER</div>
             </div>
-          </div> */}
+          </div>
 
         </div>
       </div>
