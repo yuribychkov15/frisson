@@ -101,7 +101,7 @@ const Project: React.FC = () => {
               </video>
             </div>
             <div className="project4-info">
-              <div className="project-title">Liz Stuart</div>
+              <Link to="/liz1" className="project-title">Liz Stuart</Link>
               <div className="project-subtitle">HOTTEST SUMMER EVER</div>
             </div>
           </div>
