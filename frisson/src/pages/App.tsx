@@ -15,6 +15,7 @@
 // import Services from './Services';
 // import Info from './Info';
 // import Project from './Project';
+// import Chloe1 from './Chloe1';
 
 // const LandingPage: React.FC = () => {
 //   const mainLogoRef = useRef<HTMLDivElement>(null);
@@ -78,6 +79,7 @@ const App: React.FC = () => {
     //   <Route path="/services" element={<Services />} />
     //   <Route path="/info" element={<Info />} />
     //   <Route path="/project" element={<Project />} />
+    //   <Route path="/chloe1" element={<Chloe1 />} />
     // </Routes>
     <div><h1>CURRENTLY UNDER MAINTENCE :P</h1></div>
   );

@@ -15,6 +15,7 @@ import Project2Video from '../assets/WEBSITE - PROJECT CARD - SOPHIA MESSA - PUT
 import Project3Imaage from '../assets/gray-simple-textured-design-background_53876-108318.png';
 import Project4Video from '../assets/WEBSITE - PROJECT CARD - LIZ STUART - HSE.mp4';
 
+
 const Project: React.FC = () => {
   const socialIconsRef = useRef<HTMLDivElement>(null);
   
@@ -61,7 +62,7 @@ const Project: React.FC = () => {
               <img src={Project1Image} alt="KEFI SERIES #1" className="project1-image" />
             </div>
             <div className="project1-info">
-              <Link to="/chloe-southern" className="project-title">Chloe Southern</Link>
+              <Link to="/chloe1" className="project-title">Chloe Southern</Link>
               <div className="project-subtitle">KEFI SERIES #1</div>
             </div>
           </div>
