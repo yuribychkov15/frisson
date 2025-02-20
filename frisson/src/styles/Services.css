@@ -10,14 +10,18 @@
 /* 2) Services wrapper */
 .services-wrapper {
   position: relative;
-  margin-left: 655px; /* Fixed margin-left */
-  padding: 3rem 2rem;
+  margin-left: 655px;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* 3) Top block */
 .services-text-top {
   max-width: 770px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .services-text-top h1 {
@@ -26,9 +30,9 @@
 }
 
 .services-top-text {
-  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
   line-height: 1.1;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: left;
   display: block;
   width: 100%;
@@ -36,8 +40,8 @@
 }
 
 .services-top-text-two {
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-  line-height: 1.4;
+  font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+  line-height: 1.6;
   text-align: left;
   margin: 0;
 }
@@ -45,24 +49,26 @@
 /* 4) Bottom three-column block */
 .services-text-bottom {
   max-width: 1402px;
+  margin-top: auto;
+  margin-bottom: 1000px;
 }
 
 .services-bottom-columns {
   display: flex;
-  gap: 4rem;
+  gap: 6rem;
 }
 
 .services-column {
-  width: clamp(200px, 25vw, 454px);
+  width: clamp(250px, 28vw, 454px);
   text-align: left;
 }
 
 .services-column h2 {
   font-family: var(--font-coconat);
   font-weight: var(--font-coconat-regular);
-  font-size: clamp(1.6rem, 2.5vw, 3rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   text-transform: uppercase;
   display: block;
   width: 100%;
@@ -70,56 +76,148 @@
 }
 
 .sub-block {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .sub-block h3 {
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-  margin-bottom: 0.25rem;
+  font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+  margin-bottom: 0.5rem;
 }
 
 .sub-block p,
 .events-column p {
-  font-size: clamp(0.8rem, 1.1vw, 1rem);
-  line-height: 1.4;
+  font-size: clamp(1rem, 1.3vw, 1.3rem);
+  line-height: 1.6;
   margin: 0;
 }
 
+@media screen and (min-width: 1921px) and (max-width: 2560px) {
+  .services-top-text {
+    font-size: clamp(3.5rem, 5vw, 6rem);
+  }
+
+  .services-top-text-two {
+    font-size: clamp(1.4rem, 1.8vw, 2rem);
+    line-height: 1.6;
+  }
+
+  .services-column h2 {
+    font-size: clamp(2.8rem, 4vw, 4.5rem);
+    margin-bottom: 3rem;
+  }
+
+  .sub-block {
+    margin-bottom: 3rem;
+  }
+
+  .sub-block h3 {
+    font-size: clamp(1.4rem, 1.8vw, 2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .sub-block p,
+  .events-column p {
+    font-size: clamp(1.3rem, 1.6vw, 1.8rem);
+    line-height: 1.6;
+  }
+
+  .services-bottom-columns {
+    gap: 8rem;
+  }
+
+  .services-column {
+    width: clamp(300px, 30vw, 500px);
+  }
+}
 
 /* Media Queries */
 @media screen and (max-width: 1440px) {
   .services-wrapper {
-      margin-left: 400px;
-      padding: 2rem 1.5rem;
+    margin-left: 400px;
+    padding: 3rem 1.5rem;
   }
 
   .services-top-text {
-      font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    font-size: clamp(2.2rem, 3vw, 3.5rem);
   }
 
   .services-column h2 {
-      font-size: clamp(1.4rem, 2vw, 2.2rem);
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  }
+  
+  .services-bottom-columns {
+    gap: 4rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .services-wrapper {
-      margin-left: 2rem;
-      padding: 2rem 1rem;
+    margin-left: 2rem;
+    padding: 3rem 1rem;
   }
 
   .services-bottom-columns {
-      flex-direction: column;
-      gap: 2rem;
+    flex-direction: column;
+    gap: 3rem;
   }
 
   .services-column {
-      width: 100%;
-      max-width: 600px;
+    width: 100%;
+    max-width: 600px;
   }
 
   .services-text-top,
   .services-text-bottom {
-      max-width: 90%;
+    max-width: 90%;
   }
+  
+  .sub-block {
+    margin-bottom: 2rem;
+  }
+  
+  .services-text-top {
+    margin-bottom: 4rem;
+  }
+}
+
+/* Corner Icons */
+/* Services corner icons - completely separate styling */
+.services-corner-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.services-corner-icons a {
+  position: fixed;
+  width: clamp(24px, 5vw, 48px);
+  height: clamp(24px, 5vw, 48px);
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-corner-icons a.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.services-corner-icons a.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.services-corner-icons a.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.services-corner-icons a.bottom-right {
+  bottom: 20px;
+  right: 20px;
 }

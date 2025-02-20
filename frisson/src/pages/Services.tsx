@@ -23,6 +23,22 @@ const Services: React.FC = () => {
 
   return (
     <div className="contact-page">
+      {/* Corner social icons */}
+      <div className="services-corner-icons" ref={socialIconsRef}>
+        <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
+          <FrissonIcon />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
+          <InstagramIcon />
+        </a>
+        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
+          <SpotifyIcon />
+        </a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
+          <TikTokIcon />
+        </a>
+      </div>
+      
       <div className="services-wrapper">
         
         {/* Top block – CREATIVE STRATEGY */}
@@ -94,22 +110,6 @@ const Services: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Corner social icons */}
-      <div className="corner-icons" ref={socialIconsRef}>
-        <a href="/" target="_self" rel="noopener noreferrer" className="top-left">
-          <FrissonIcon />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="top-right">
-          <InstagramIcon />
-        </a>
-        <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" className="bottom-left">
-          <SpotifyIcon />
-        </a>
-        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="bottom-right">
-          <TikTokIcon />
-        </a>
       </div>
     </div>
   );
