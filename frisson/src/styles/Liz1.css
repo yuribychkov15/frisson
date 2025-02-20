@@ -27,6 +27,8 @@
   
   .liz-services {
     font-size: 1.2rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
     margin-right: 450px;
     color: #0037FF;
     opacity: 0.8;
@@ -52,15 +54,19 @@
     bottom: -70px;
     left: 0;
     font-size: 1.125rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
     color: #0037FF;
   }
 
   .liz-image-credit {
     margin-top: 20px;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
   }
   
   .project-description {
-    max-width: 800px;
+    max-width: 850px;
     margin-left: auto;
     color: #0037FF;
   }
@@ -68,6 +74,8 @@
   .project-description p {
     margin-bottom: 40px;
     font-size: 1.5rem;
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-weight: 400;
     line-height: 1.6;
   }
   

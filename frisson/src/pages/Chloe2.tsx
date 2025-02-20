@@ -63,7 +63,7 @@ const Chloe2: React.FC = () => {
         <div className="chloe2-header">
           <h1><u>CHLOE SOUTHERN:</u> WHAT CAN <br />I DO BEYOND SOCIAL MEDIA?</h1>
             <div className="chloe2-services">
-                Services: Event production, short form,<br />
+                <u>Services:</u> Event production, short form,<br />
                 photography and video production, event<br />
                 menus, event invitation, promotional show<br />
                 graphic

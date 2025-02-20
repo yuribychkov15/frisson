@@ -27,6 +27,8 @@
   
   .chloe2-services {
     font-size: 1.2rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
     margin-right: 300px;
     color: #0037FF;
     opacity: 0.8;
@@ -52,13 +54,17 @@
     bottom: -70px;
     left: 0;
     font-size: 1.125rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
     color: #0037FF;
   }
   
   .project-description {
-    max-width: 800px;
+    max-width: 850px;
     margin-left: auto;
     color: #0037FF;
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-weight: 400;
   }
   
   .project-description p {
@@ -131,6 +137,8 @@
     bottom: -40px;
     left: 0;
     font-size: 0.875rem;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
     color: #0037FF;
   }
 
@@ -155,14 +163,7 @@
     height: 100%;
     object-fit: cover;
   }
-  
-  .image-text {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #0037FF;
-    font-size: 1rem;
-  }
+
   
   /* Responsive styles - stack layout below 1920px */
   /* Responsive styles - stack layout below 1920px */

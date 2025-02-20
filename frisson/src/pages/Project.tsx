@@ -12,7 +12,7 @@ import Logo from '../assets/FRISSON - CONTACT PAGE - LOGO - BLACK.svg?react'; //
 
 import Project1Image from '../assets/Mask Group 6.jpg';
 import Project2Video from '../assets/WEBSITE - PROJECT CARD - SOPHIA MESSA - PUTP.mp4';
-import Project3Imaage from '../assets/gray-simple-textured-design-background_53876-108318.png';
+import Project3Imaage from '../assets/CHLOE - GUERILLA MARKETING PROJECT - COVER IMAGE.jpg';
 import Project4Video from '../assets/WEBSITE - PROJECT CARD - LIZ STUART - HSE.mp4';
 
 
@@ -76,7 +76,7 @@ const Project: React.FC = () => {
               </video>
             </div>
             <div className="project2-info">
-              <Link to="/sophia-messa" className="project-title">Sophia Messa</Link>
+              <div className="project-title">Sophia Messa</div>
               <div className="project-subtitle">PICK UP THE PHONE</div>
             </div>
           </div>

@@ -55,7 +55,7 @@ const Chloe1: React.FC = () => {
         <div className="chloe1-header">
           <h1><u>CHLOE SOUTHERN:</u> HOW CAN I <br />CAPTURE NEW LISTENERS?</h1>
           <div className="chloe-services">
-            Services: Creative strategy, single <br/>
+            <u>Services:</u> Creative strategy, single <br/>
             promotion flyer, single promotion post <br/>
             card
             </div>
@@ -75,21 +75,21 @@ const Chloe1: React.FC = () => {
         <div className="project-services">
             <div className="service-item service-1">
                 <img src={Service1Image} alt="Blueprints Promotional Flyer" className="service-image" />
-                <div className="image-credit">Blueprints' Promotional Flyer</div>
+                <div className="image-credit">'Blueprints' Promotional Flyer</div>
             </div>
             
             <div className="service-item service-2">
                 <img src={Service2Image} alt="Blueprints Instagram Post" className="service-image" />
-                <div className="image-credit">Blueprints' Promotional Flyer</div>
+                <div className="image-credit">'Blueprints' Promotional Flyer</div>
             </div>
             <div className="service-item service-3">
                 <img src={Service3Image} alt="Blueprints Promotional Flyer" className="service-image" />
-                <div className="image-credit">Blueprints' Promotional Flyer</div>
+                <div className="image-credit">'Blueprints' Promotional Flyer</div>
             </div>
             
             <div className="service-item service-4">
                 <img src={Service4Image} alt="Blueprints Instagram Post" className="service-image" />
-                <div className="image-credit">Blueprints' Promotional Flyer</div>
+                <div className="image-credit">'Blueprints' Promotional Flyer</div>
             </div>
         </div>
       </div>

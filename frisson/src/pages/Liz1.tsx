@@ -54,7 +54,7 @@ const Liz1: React.FC = () => {
         <div className="liz1-header">
           <h1><u>LIZ STUART:</u> HOW DO I<br />VISUALIZE MY MUSIC?</h1>
             <div className="liz-services">
-                Services: Photography, Video Production,<br />
+                <u>Services:</u> Photography, Video Production,<br />
                 Short Form, Teasers, Spotify Canvas,<br /> 
                 Cover Artwork, Title Sequence
             </div>
