@@ -5,6 +5,7 @@
   width: 100vw;
   background: #0000ff;
   overflow-y: auto;
+  overflow-x: auto;
 }
 
 /* 2) Services wrapper */
@@ -41,6 +42,8 @@
 
 .services-top-text-two {
   font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+  font-family: 'Neue Haas Grotesk', sans-serif;
+  font-weight: 600;
   line-height: 1.6;
   text-align: left;
   margin: 0;
@@ -80,13 +83,17 @@
 }
 
 .sub-block h3 {
-  font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+  font-size: clamp(0.825rem, 1.125vw, 1.125rem);
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 .sub-block p,
 .events-column p {
   font-size: clamp(1rem, 1.3vw, 1.3rem);
+  font-family: 'Neue Haas Grotesk', sans-serif;
+  font-weight: 800;
   line-height: 1.6;
   margin: 0;
 }

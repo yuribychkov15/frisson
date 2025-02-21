@@ -1,107 +1,15 @@
-
-/* Responsive adjustments for smaller screens */
-/* Ensure Menu Links Scale with Logo Dynamically */
-
-/* Responsive adjustments for larger screens */
-@media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .main-logo-container {
-    width: 85vw;
-    height: 85vw;
-  }
-
-  .menu-links {
-    width: 85%;
-    height: 85%;
-  }
-
-  .menu-links a {
-    font-size: 1.375rem; /* Adjust font size */
-  }
+/* Basic Reset */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-@media only screen and (min-width: 1440px) and (max-width: 2559px) {
-  .main-logo-container {
-    width: 90vw;
-    height: 90vw;
-  }
-
-  .menu-links {
-    width: 90%;
-    height: 90%;
-  }
-
-  .menu-links a {
-    font-size: 1.5rem; /* Adjust font size */
-  }
+#root {
+  height: 100vh;
+  width: 100vw;
 }
 
-@media only screen and (min-width: 2560px) {
-  .main-logo-container {
-    width: 100vw;
-    height: 100vw;
-  }
-
-  .menu-links {
-    width: 100%;
-    height: 100%;
-  }
-
-  .menu-links a {
-    font-size: 2rem; /* Adjust font size */
-  }
-}
-
-/* Responsive adjustments for smaller screens */
-/* Ensure Menu Links Scale with Logo Dynamically */
-@media only screen and (max-width: 1024px) {
-  .main-logo-container {
-    width: 70vw;
-    height: 70vw;
-  }
-
-  .menu-links {
-    width: 70%;
-    height: 70%;
-  }
-
-  .menu-links a {
-    font-size: 1rem; /* Adjust font size */
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .main-logo-container {
-    width: 60vw;
-    height: 60vw;
-  }
-
-  .menu-links {
-    width: 60%;
-    height: 60%;
-  }
-
-  .menu-links a {
-    font-size: 0.6rem; /* Adjust font size */
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .main-logo-container {
-    width: 50vw;
-    height: 50vw;
-  }
-
-  .menu-links {
-    width: 50%;
-    height: 50%;
-  }
-
-  .menu-links a {
-    font-size: 0.5rem; /* Adjust font size */
-  }
-}
-
-/* Landing Page */
 .landing-page {
   min-height: 100vh;
   width: 100vw;
@@ -110,61 +18,56 @@
   justify-content: center;
   align-items: center;
   background-color: #003CE0;
-  color: #003CE0;
-  overflow: hidden;
 }
 
-/* Main Logo Container */
 .main-logo-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80vw;
-  height: 80vw;
-  max-width: 1200px; /* Adjust this for 1920x1080 */
-  max-height: 1200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 76vw;
+  height: 76vw;
+  max-width: 1464px;
+  max-height: 1464px;
 }
 
-/* SVG sizing */
-.main-logo-container .logo {
+.logo {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.main-logo-container .logo svg {
+.logo svg {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-/* Menu Links - Updated for better responsiveness */
+.main-logo-container svg path {
+  fill: #000000;
+}
+
 .menu-links {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  pointer-events: none; /* Allows clicking through the container */
+  pointer-events: none;
 }
 
 .menu-links a {
   position: absolute;
   text-decoration: none;
   color: #000000;
-  pointer-events: auto; /* Re-enable clicking for links */
-  white-space: nowrap; /* Prevent text wrapping */
+  pointer-events: auto;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-family: 'Neue Haas Grotesk', sans-serif;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
-/* Position menu items with percentage-based positioning */
+/* Fixed positions aligned with logo branches */
 .menu-links .projects {
   top: 26%;
   left: 14%;
@@ -189,27 +92,27 @@
   transform: translate(50%, 50%);
 }
 
-/* Add hover effects for menu links */
-.menu-links a:hover {
-  color: #555; /* Change color on hover */
+/* Simple responsive font scaling */
+@media screen and (max-width: 1440px) {
+  .menu-links a {
+    font-size: 1.2rem;
+  }
 }
 
-.main-logo-container svg path {
-  fill: #000000;
+@media screen and (max-width: 1024px) {
+  .menu-links a {
+    font-size: 1rem;
+  }
 }
 
-/* Basic Reset */
-body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: "neue-haas-grotesk-display", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-
+@media screen and (max-width: 768px) {
+  .menu-links a {
+    font-size: 0.8rem;
+  }
 }
 
-#root {
-  height: 100vh;
-  width: 100vw;
+@media screen and (max-width: 480px) {
+  .menu-links a {
+    font-size: 0.6rem;
+  }
 }
