@@ -1,27 +1,25 @@
 /* Basic Reset */
-/* Basic Reset */
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 #root {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  overflow: hidden;
 }
 
+/* Landing page specific styles */
 .landing-page {
   min-height: 100vh;
-  height: 100vh; /* Added fixed height */
+  height: 100vh;
   width: 100vw;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #003CE0;
-  overflow: hidden; /* Added overflow control */
+  overflow: hidden; /* Only hide overflow on landing page */
   margin: 0;
   padding: 0;
 }
