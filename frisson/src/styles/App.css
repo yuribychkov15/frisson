@@ -1,4 +1,5 @@
 /* Basic Reset */
+/* Basic Reset */
 body {
   margin: 0;
   padding: 0;
@@ -8,16 +9,21 @@ body {
 #root {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .landing-page {
   min-height: 100vh;
+  height: 100vh; /* Added fixed height */
   width: 100vw;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #003CE0;
+  overflow: hidden; /* Added overflow control */
+  margin: 0;
+  padding: 0;
 }
 
 .main-logo-container {
